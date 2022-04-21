@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Immunity
 {
-    public partial class Immunity : Form
+    public partial class Immunity_panel : Form
     {
         public class Variables
         {
@@ -21,7 +21,6 @@ namespace Immunity
             public Dictionary<string, List<string>> dump = new Dictionary<string, List<string>>();
             public Popup.Wait waiter = new Popup.Wait();
             public Popup.Error select_all = new Popup.Error("Be careful some configuration settings will be in conflict");
-            public Engine.Templates configurations = new Engine.Templates();
             public Dictionary<string, Engine.Item> templates = new Dictionary<string, Engine.Item>()
             {
                 { "Adaptive exposure: disable", new Engine.Item(Engine.Types.get(Engine.Types.system_settings, false), Engine.Options.EyeAdaptationQuality, 0) },
@@ -210,7 +209,7 @@ namespace Immunity
 
         Variables variables = new Variables();
 
-        public Immunity()
+        public Immunity_panel()
         {
             InitializeComponent();
             InitializeUi();
@@ -384,6 +383,11 @@ namespace Immunity
             {
                 checkboxes_modules.SetItemChecked(i, false);
             }
+        }
+
+        private void bunifuCards2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void Immunity_Shown(object sender, EventArgs e)

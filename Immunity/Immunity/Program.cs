@@ -16,7 +16,8 @@ namespace Immunity
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Immunity());
+            //Application.Run(new Immunity());
+            Application.Run(new Immunity_panel());
         }
     }
 }

@@ -153,7 +153,14 @@
   <ItemGroup>
     <Compile Include="Engine\Builder.cs" />
     <Compile Include="Engine\Item.cs" />
+    <Compile Include="Engine\Templates.cs" />
     <Compile Include="Engine\Types.cs" />
+    <Compile Include="Immunity_panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Immunity_panel.Designer.cs">
+      <DependentUpon>Immunity_panel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Immunity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +183,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Immunity_panel.resx">
+      <DependentUpon>Immunity_panel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Immunity.resx">
       <DependentUpon>Immunity.cs</DependentUpon>
     </EmbeddedResource>

@@ -248,5 +248,13 @@ namespace Immunity.Manager
                 controller.Enabled = value;
             }));
         }
+
+        public void add_checkedlistbox(CheckedListBox controller, string data)
+        {
+            controller.Invoke(new MethodInvoker(delegate
+            {
+                controller.Items.Add(data);
+            }));
+        }
     }
 }
